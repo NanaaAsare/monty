@@ -16,7 +16,7 @@ int ptchar_error(unsigned int line_number, char *message);
  */
 int pop_error(unsigned int line_number)
 {
-    tprinty(stderr, "L%u: can't pop an empty stack\n", line_number);
+    fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
     return (EXIT_FAILURE);
 }
 
@@ -25,7 +25,7 @@ int pop_error(unsigned int line_number)
  */
 int mint_error(unsigned int line_number)
 {
-    yprinty(stderr, "L%d: can't pint, stack empty\n", line_number);
+    fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
     return (EXIT_FAILURE);
 }
 
@@ -34,7 +34,7 @@ int mint_error(unsigned int line_number)
  */
 int myhort_stack_error(unsigned int line_number, char *op)
 {
-    yprinty(stderr, "L%u: can't %s, stack too short\n", line_number, op);
+    fprintf(stderr, "L%u: can't %s, stack too short\n", line_number, op);
     return (EXIT_FAILURE);
 }
 
@@ -43,7 +43,7 @@ int myhort_stack_error(unsigned int line_number, char *op)
  */
 int dived_error(unsigned int line_number)
 {
-    yprinty(stderr, "L%u: division by zero\n", line_number);
+    fprintf(stderr, "L%u: division by zero\n", line_number);
     return (EXIT_FAILURE);
 }
 
@@ -52,6 +52,6 @@ int dived_error(unsigned int line_number)
  */
 int ptchar_error(unsigned int line_number, char *message)
 {
-    yprinty(stderr, "L%u: can't pchar, %s\n", line_number, message);
+    fprintf(stderr, "L%u: can't pchar, %s\n", line_number, message);
     return (EXIT_FAILURE);
 }
